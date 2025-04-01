@@ -1,7 +1,6 @@
-use sqlx::{Pool, Postgres};
+use sqlx::{Pool, Sqlite};
 
-pub async fn seed_products(pool: &Pool<Postgres>) {
-    // Sample product data
+pub async fn seed_products(pool: &Pool<Sqlite>) {
     let products = vec![
         ("Laptop", "A high-performance laptop", 1200.00, 10),
         ("Phone", "A smartphone with excellent camera quality", 800.00, 25),
@@ -12,7 +11,7 @@ pub async fn seed_products(pool: &Pool<Postgres>) {
     for (name, description, price, stock) in products {
         sqlx::query!(
             "INSERT INTO products (name, description, price, stock)
-             VALUES ($1, $2, $3, $4)",
+             VALUES (?1, ?2, ?3, ?4)",
             name,
             description,
             price,

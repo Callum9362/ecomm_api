@@ -1,0 +1,3 @@
+ALTER TABLE products ADD COLUMN blockchain_tx_id VARCHAR(255);
+ALTER TABLE products ADD COLUMN is_verified BOOLEAN DEFAULT FALSE NOT NULL;
+ALTER TABLE products ADD COLUMN current_location VARCHAR(255);

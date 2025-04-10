@@ -17,13 +17,14 @@ The goal is to track a product's supply chain in a transparent and secure way. E
 `currentLocation` (String): The current location/state of the product in the supply chain.~~~~
 
 ### **Supply Chain Events Table**
-Create a new table to store product events in the supply chain:
-- `id` (UUID): Unique ID for the supply chain event.
-- `productId` (Foreign Key): Reference to the product being tracked.
-- `event` (String): Description of the event (e.g., "Manufactured", "Shipped", "Delivered").
-- `location` (String): Location where the event occurred.
-- `timestamp` (DateTime): When the event was recorded.
-- `blockchainTxId` (String): Blockchain transaction ID for this specific event.
+
+~~Create a new table to store product events in the supply chain:~~
+~~- `id` (UUID): Unique ID for the supply chain event.~~
+~~- `productId` (Foreign Key): Reference to the product being tracked.~~
+~~- `event` (String): Description of the event (e.g., "Manufactured", "Shipped", "Delivered").~~
+~~- `location` (String): Location where the event occurred.~~
+~~- `timestamp` (DateTime): When the event was recorded.~~
+~~- `blockchainTxId` (String): Blockchain transaction ID for this specific event.~~
 
 ---
 

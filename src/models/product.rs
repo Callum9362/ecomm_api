@@ -7,4 +7,7 @@ pub struct Product {
     pub description:  Option<String>,
     pub price: f64,
     pub stock: i64,
+    pub blockchain_tx_id: Option<String>,
+    pub is_verified: bool,
+    pub current_location: Option<String>,
 }
